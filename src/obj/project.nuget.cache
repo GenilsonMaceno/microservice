@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D0IgqS3DSLd7yspJugFXzJvo2Hx7p4DHZOf6VoFlG3y7Pp2U+7YHUhOUeVVTI7zIUhOa055GF6GRPyA5J5RvyQ==",
+  "dgSpecHash": "VqAQOw5STuw=",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\microssservices\\src\\CustomerWebApi.csproj",
+  "projectFilePath": "C:\\MyProjects\\microservice\\src\\CustomerWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\genil\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\genil\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
