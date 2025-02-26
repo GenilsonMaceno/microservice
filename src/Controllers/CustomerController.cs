@@ -22,7 +22,7 @@ namespace src.Controllers
             _customerDbContext = customerDbContext;
         }
 
-        [HttpGet]
+        [HttpGet("customers")]
         public ActionResult<IEnumerable<Customer>> GetCustomers(){
 
             return _customerDbContext.Customers;
