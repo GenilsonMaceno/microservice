@@ -482,3 +482,11 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+
+# Ignore bin and obj folders
+bin/
+obj/
+src/bin/
+src/obj/
+
