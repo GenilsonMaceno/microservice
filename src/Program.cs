@@ -1,3 +1,4 @@
+using System.Globalization;
 using Microsoft.EntityFrameworkCore;
 using src;
 
@@ -12,10 +13,10 @@ builder.Services.AddControllers();
 
 /* add database context dependency Injection */
 
-var dbHost = "localhost";
+var dbHost = @"(localdb)\MSSQLLocalDB";
 var dbName = "dms_customer";
-var dbPassword = "P@ssw0rd121#";
-var connectionString = $"Data Source={dbHost};Intial Catalog={dbName};User ID=sa;Password={dbPassword}";
+var connectionString = $"Data Source={dbHost};Initial Catalog={dbName};Integrated Security=True;";//$"Data Source={dbHost};Initial Catalog={dbName};User ID=sa;Password={dbPassword}";
+
 builder.Services.AddDbContext<CustomerDbContext>(options => options.UseSqlServer(connectionString));
 
 
