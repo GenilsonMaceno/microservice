@@ -22,7 +22,8 @@ namespace src.Controllers
             _customerDbContext = customerDbContext;
         }
 
-        [HttpGet("customers")]
+        [HttpGet]
+        [Route("/api/Customers")]
         public ActionResult<IEnumerable<Customer>> GetCustomers(){
 
             return _customerDbContext.Customers;
@@ -55,6 +56,7 @@ namespace src.Controllers
             }
 
             _customerDbContext.Customers.Remove(customer);
+            await _customerDbContext.SaveChangesAsync();
             return Ok();
 
         }
