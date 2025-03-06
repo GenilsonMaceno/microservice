@@ -24,7 +24,7 @@ namespace src.Controllers
 
         [HttpGet]
         [Route("/api/Customers")]
-        public ActionResult<IEnumerable<Customer>> GetCustomers(){
+        public ActionResult<IEnumerable<Customer>> GetAll(){
 
             return _customerDbContext.Customers;
         }
