@@ -12,10 +12,17 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
 /* add database context dependency Injection */
-
+/** connection string local
 var dbHost = @"(localdb)\MSSQLLocalDB";
 var dbName = "dms_customer";
 var connectionString = $"Data Source={dbHost};Initial Catalog={dbName};Integrated Security=True;";//$"Data Source={dbHost};Initial Catalog={dbName};User ID=sa;Password={dbPassword}";
+**/
+
+// connection string docker
+var dbHost = Environment.GetEnvironmentVariable("DB_HOST");
+var dbName = Environment.GetEnvironmentVariable("DB_NAME");
+var dbPassword = Environment.GetEnvironmentVariable("DB_SA_PASSWORD");
+var connectionString = $"Data Source={dbHost};Initial Catalog={dbName};User ID=sa;Password={dbPassword}";//$"Data Source={dbHost};Initial Catalog={dbName};User ID=sa;Password={dbPassword}";
 
 builder.Services.AddDbContext<CustomerDbContext>(options => options.UseSqlServer(connectionString));
 
